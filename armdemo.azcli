@@ -1,0 +1,15 @@
+# show az cli tool version
+az --version
+
+# Login
+az login
+
+# Select Subscription
+az account set --subscription c04b3c63-8dfe-4f98-be18-e71ff67a1f4e
+
+# create resource group
+az group create --name armdemo --location southeastasia
+
+# deploy resource
+az deployment group create --resource-group armdemo --template-file armdemo.json
+
