@@ -16,3 +16,9 @@ az deployment group create --resource-group armdemo --template-file armdemo.json
 # What-if
 az deployment group create --confirm-with-what-if --resource-group armdemo --template-file armdemo.json --name whatifdemo
 
+# Delete the resource
+az  group delete  --name armdemo
+
+
+demo
+
