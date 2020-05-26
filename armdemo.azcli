@@ -19,6 +19,5 @@ az deployment group create --confirm-with-what-if --resource-group armdemo --tem
 # Delete the resource
 az  group delete  --name armdemo
 
-
-demo
+az group deployment create --resource-group armdemoprod --template-file ./armdemo.json --name githubaction$GITHUB_RUN_ID
 
