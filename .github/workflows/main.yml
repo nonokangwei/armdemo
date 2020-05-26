@@ -39,7 +39,7 @@ jobs:
       with:
         # Specify the script here
         inlineScript: |
-          az group deployment create --resource-group armdemoprod --template-file ./armdemo.json --name ${{github.run_id}}
+          az group deployment create --resource-group armdemoprod --template-file ./armdemo.json --name githubaction${{github.run_id}}
         # Azure CLI version to be used to execute the script. If not provided, latest version is used
         # azcliversion: # optional, default is latest
       env:
