@@ -1,3 +1,3 @@
 # armdemo
 
-![](https://github.com/nonokangwei/armdemo/workflows/Greet%20Everyone/badge.svg)
+![](https://github.com/nonokangwei/armdemo/workflows/.github/workflows/main.yml/badge.svg)
