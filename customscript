@@ -1,0 +1,21 @@
+{
+    "name": "ubuntuVM1/customScript1",
+    "type": "Microsoft.Compute/virtualMachines/extensions",
+    "apiVersion": "2019-07-01",
+    "location": "[resourceGroup().location]",
+    "tags": {
+        "displayName": "customScript1 for Linux VM"
+    },
+    "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', 'ubuntuVM1')]"
+    ],
+    "properties": {
+        "publisher": "Microsoft.Azure.Extensions",
+        "type": "CustomScript",
+        "typeHandlerVersion": "2.1",
+        "autoUpgradeMinorVersion": true,
+        "settings": {
+            "commandToExecute": "apt update && apt install apache2 -y"
+        }
+    }
+}

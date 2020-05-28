@@ -8,16 +8,19 @@ az login
 az account set --subscription c04b3c63-8dfe-4f98-be18-e71ff67a1f4e
 
 # create resource group
-az group create --name armdemo --location southeastasia
+az group create --name armdemoprod --location eastus2
+az group create --name armdemodev --location eastus2
 
 # deploy resource
 az deployment group create --resource-group armdemo --template-file armdemo.json
 
 # What-if
-az deployment group create --confirm-with-what-if --resource-group armdemo --template-file armdemo.json --name whatifdemo
+az deployment group create --confirm-with-what-if --resource-group armdemoprod --template-file armdemo.json --name whatifdemo
 
 # Delete the resource
-az  group delete  --name armdemo
+az group delete --name armdemoprod
+
+az group delete --name armdemodev 
 
 az group deployment create --resource-group armdemoprod --template-file ./armdemo.json --name githubaction$GITHUB_RUN_ID
 
