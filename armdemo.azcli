@@ -23,4 +23,3 @@ az group delete --name armdemoprod
 az group delete --name armdemodev 
 
 az group deployment create --resource-group armdemoprod --template-file ./armdemo.json --name githubaction$GITHUB_RUN_ID
-
