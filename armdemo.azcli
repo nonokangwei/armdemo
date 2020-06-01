@@ -12,7 +12,7 @@ az group create --name armdemoprod --location eastus2
 az group create --name armdemodev --location eastus2
 
 # deploy resource
-az deployment group create --resource-group armdemo --template-file armdemo.json
+az deployment group create --resource-group armdemodev --template-file armdemo.json --name armdemodev
 
 # What-if
 az deployment group create --confirm-with-what-if --resource-group armdemoprod --template-file armdemo.json --name whatifdemo
