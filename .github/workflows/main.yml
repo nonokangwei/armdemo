@@ -8,7 +8,7 @@ on:
   push:
     branches: [ master ]
     paths:
-    - '**.json'
+      - '**.json'
   pull_request:
     branches: [ master ]
     paths:
